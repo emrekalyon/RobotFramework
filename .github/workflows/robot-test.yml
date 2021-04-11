@@ -23,6 +23,7 @@ jobs:
           ROBOT_REPORTS_DIR: ${{ github.workspace }}/driver/
       - name: Upload test results
         uses: actions/upload-artifact@v1
+        if: always()
         with:
             name: reports
             path: test_results/
