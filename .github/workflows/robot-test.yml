@@ -2,15 +2,16 @@
 name: 'Heroku-deploy'
 on: 
   push:
-    branches:
-      - master
+    branches: [master]
+  pull_request:
+    branches: [master]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     container:
       image: owasp/zap2docker-stable
       options: --user root -v ${{ github.workspace }}:/reports:rw    
-    name: Run Robot Framework Tests
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -22,7 +23,6 @@ jobs:
           ROBOT_REPORTS_DIR: ${{ github.workspace }}/driver/
       - name: Upload test results
         uses: actions/upload-artifact@v1
-        if: always()
         with:
             name: reports
-            path: ${{ github.workspace }}/driver
+            path: test_results/
