@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.1 (Python 3.8.5 on linux)" generated="20210411 15:17:23.456" rpa="false" schemaversion="2">
+<suite id="s1" name="RobotFrameworktest" source="/home/emre/workspace_nokika/RobotFrameworktest">
+<suite id="s1-s1" name="Scenario-Tests" source="/home/emre/workspace_nokika/RobotFrameworktest/scenario-tests.robot">
+<test id="s1-s1-t1" name="Scenario 1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210411 15:17:23.603" level="INFO">Opening browser 'chrome' to base url 'https://nokia-interview.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20210411 15:17:23.602" endtime="20210411 15:17:25.415"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:show-form-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:25.417" level="INFO">Clicking element 'id:show-form-button'.</msg>
+<status status="PASS" starttime="20210411 15:17:25.416" endtime="20210411 15:17:25.642"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_id</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:25.643" level="INFO">Typing text '1' into text field 'id:input_id'.</msg>
+<status status="PASS" starttime="20210411 15:17:25.642" endtime="20210411 15:17:25.735"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_name</arg>
+<arg>Generic Name</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:25.736" level="INFO">Typing text 'Generic Name' into text field 'id:input_name'.</msg>
+<status status="PASS" starttime="20210411 15:17:25.736" endtime="20210411 15:17:25.818"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_phone</arg>
+<arg>999999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:25.819" level="INFO">Typing text '999999999' into text field 'id:input_phone'.</msg>
+<status status="PASS" starttime="20210411 15:17:25.818" endtime="20210411 15:17:25.908"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_email</arg>
+<arg>genericname@company.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:25.909" level="INFO">Typing text 'genericname@company.com' into text field 'id:input_email'.</msg>
+<status status="PASS" starttime="20210411 15:17:25.909" endtime="20210411 15:17:26.009"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_address</arg>
+<arg>Generic Street 42 Earth</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:26.009" level="INFO">Typing text 'Generic Street 42 Earth' into text field 'id:input_address'.</msg>
+<status status="PASS" starttime="20210411 15:17:26.009" endtime="20210411 15:17:26.106"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_country</arg>
+<arg>Navarro</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:26.107" level="INFO">Typing text 'Navarro' into text field 'id:input_country'.</msg>
+<status status="PASS" starttime="20210411 15:17:26.107" endtime="20210411 15:17:26.193"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_department</arg>
+<arg>T21R</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:26.194" level="INFO">Typing text 'T21R' into text field 'id:input_department'.</msg>
+<status status="PASS" starttime="20210411 15:17:26.193" endtime="20210411 15:17:26.276"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:create-new-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:26.277" level="INFO">Clicking element 'id:create-new-button'.</msg>
+<status status="PASS" starttime="20210411 15:17:26.276" endtime="20210411 15:17:26.525"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${response}</var>
+<arg>id:success-message</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:26.552" level="INFO">${response} = User Accounts Created Successfully</msg>
+<status status="PASS" starttime="20210411 15:17:26.526" endtime="20210411 15:17:26.552"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>User Accounts Created Successfully</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210411 15:17:26.552" endtime="20210411 15:17:26.553"/>
+</kw>
+<status status="PASS" starttime="20210411 15:17:23.601" endtime="20210411 15:17:26.553"/>
+</test>
+<test id="s1-s1-t2" name="Scenario 2">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210411 15:17:26.555" level="INFO">Opening browser 'chrome' to base url 'https://nokia-interview.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20210411 15:17:26.555" endtime="20210411 15:17:28.304"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:show-form-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:28.305" level="INFO">Clicking element 'id:show-form-button'.</msg>
+<status status="PASS" starttime="20210411 15:17:28.305" endtime="20210411 15:17:28.520"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_id</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:28.521" level="INFO">Typing text '2' into text field 'id:input_id'.</msg>
+<status status="PASS" starttime="20210411 15:17:28.520" endtime="20210411 15:17:28.615"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_name</arg>
+<arg>Kuill</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:28.616" level="INFO">Typing text 'Kuill' into text field 'id:input_name'.</msg>
+<status status="PASS" starttime="20210411 15:17:28.615" endtime="20210411 15:17:28.709"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_phone</arg>
+<arg>99999999999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:28.709" level="INFO">Typing text '99999999999999' into text field 'id:input_phone'.</msg>
+<status status="PASS" starttime="20210411 15:17:28.709" endtime="20210411 15:17:28.800"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_email</arg>
+<arg>genericname@company.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:28.801" level="INFO">Typing text 'genericname@company.com' into text field 'id:input_email'.</msg>
+<status status="PASS" starttime="20210411 15:17:28.800" endtime="20210411 15:17:28.889"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_address</arg>
+<arg>Generic Street 42 Hoth</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:28.890" level="INFO">Typing text 'Generic Street 42 Hoth' into text field 'id:input_address'.</msg>
+<status status="PASS" starttime="20210411 15:17:28.890" endtime="20210411 15:17:28.980"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_country</arg>
+<arg>Arvala</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:28.981" level="INFO">Typing text 'Arvala' into text field 'id:input_country'.</msg>
+<status status="PASS" starttime="20210411 15:17:28.980" endtime="20210411 15:17:29.070"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_department</arg>
+<arg>T21R</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:29.071" level="INFO">Typing text 'T21R' into text field 'id:input_department'.</msg>
+<status status="PASS" starttime="20210411 15:17:29.070" endtime="20210411 15:17:29.154"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:create-new-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:29.155" level="INFO">Clicking element 'id:create-new-button'.</msg>
+<status status="PASS" starttime="20210411 15:17:29.155" endtime="20210411 15:17:29.383"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${response}</var>
+<arg>id:error-message</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:29.410" level="INFO">${response} = phone size must be between 9 and 12</msg>
+<status status="PASS" starttime="20210411 15:17:29.383" endtime="20210411 15:17:29.410"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>phone size must be between 9 and 12</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210411 15:17:29.411" endtime="20210411 15:17:29.411"/>
+</kw>
+<status status="PASS" starttime="20210411 15:17:26.554" endtime="20210411 15:17:29.412"/>
+</test>
+<test id="s1-s1-t3" name="Scenario 3">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210411 15:17:29.413" level="INFO">Opening browser 'chrome' to base url 'https://nokia-interview.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20210411 15:17:29.413" endtime="20210411 15:17:31.186"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:show-form-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:31.187" level="INFO">Clicking element 'id:show-form-button'.</msg>
+<status status="PASS" starttime="20210411 15:17:31.186" endtime="20210411 15:17:31.369"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_id</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:31.370" level="INFO">Typing text '1' into text field 'id:input_id'.</msg>
+<status status="PASS" starttime="20210411 15:17:31.370" endtime="20210411 15:17:31.462"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_name</arg>
+<arg>Generic Name</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:31.463" level="INFO">Typing text 'Generic Name' into text field 'id:input_name'.</msg>
+<status status="PASS" starttime="20210411 15:17:31.462" endtime="20210411 15:17:31.553"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_phone</arg>
+<arg>222222222</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:31.554" level="INFO">Typing text '222222222' into text field 'id:input_phone'.</msg>
+<status status="PASS" starttime="20210411 15:17:31.553" endtime="20210411 15:17:31.644"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_email</arg>
+<arg>genericname@company.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:31.645" level="INFO">Typing text 'genericname@company.com' into text field 'id:input_email'.</msg>
+<status status="PASS" starttime="20210411 15:17:31.645" endtime="20210411 15:17:31.740"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_address</arg>
+<arg>Generic Street 42 Earth</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:31.741" level="INFO">Typing text 'Generic Street 42 Earth' into text field 'id:input_address'.</msg>
+<status status="PASS" starttime="20210411 15:17:31.741" endtime="20210411 15:17:31.831"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_country</arg>
+<arg>Navarro</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:31.832" level="INFO">Typing text 'Navarro' into text field 'id:input_country'.</msg>
+<status status="PASS" starttime="20210411 15:17:31.831" endtime="20210411 15:17:31.915"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input_department</arg>
+<arg>T21R</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:31.916" level="INFO">Typing text 'T21R' into text field 'id:input_department'.</msg>
+<status status="PASS" starttime="20210411 15:17:31.916" endtime="20210411 15:17:31.996"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:create-new-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:31.997" level="INFO">Clicking element 'id:create-new-button'.</msg>
+<status status="PASS" starttime="20210411 15:17:31.996" endtime="20210411 15:17:32.217"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${response}</var>
+<arg>id:success-message</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:32.247" level="INFO">${response} = User Accounts Updated Successfully</msg>
+<status status="PASS" starttime="20210411 15:17:32.218" endtime="20210411 15:17:32.247"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>User Accounts Updated Successfully</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210411 15:17:32.247" endtime="20210411 15:17:32.248"/>
+</kw>
+<status status="PASS" starttime="20210411 15:17:29.412" endtime="20210411 15:17:32.248"/>
+</test>
+<test id="s1-s1-t4" name="Scenario 4">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210411 15:17:32.250" level="INFO">Opening browser 'chrome' to base url 'https://nokia-interview.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20210411 15:17:32.250" endtime="20210411 15:17:34.018"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:delete-button-id-1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:34.019" level="INFO">Clicking element 'id:delete-button-id-1'.</msg>
+<status status="PASS" starttime="20210411 15:17:34.018" endtime="20210411 15:17:34.199"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${response}</var>
+<arg>id:success-message</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210411 15:17:34.225" level="INFO">${response} = User Accounts Deleted Successfully</msg>
+<status status="PASS" starttime="20210411 15:17:34.200" endtime="20210411 15:17:34.225"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>User Accounts Deleted Successfully</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210411 15:17:34.226" endtime="20210411 15:17:34.226"/>
+</kw>
+<status status="PASS" starttime="20210411 15:17:32.249" endtime="20210411 15:17:34.227"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210411 15:17:34.228" endtime="20210411 15:17:34.457"/>
+</kw>
+<status status="PASS" starttime="20210411 15:17:23.493" endtime="20210411 15:17:34.457"/>
+</suite>
+<status status="PASS" starttime="20210411 15:17:23.473" endtime="20210411 15:17:34.460"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="RobotFrameworktest">RobotFrameworktest</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="Scenario-Tests">RobotFrameworktest.Scenario-Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
