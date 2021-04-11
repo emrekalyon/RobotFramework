@@ -15,6 +15,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Get Repository Owner & Name
+        run: |
+            export OWNER="$(echo "${{ github.repository }}" | awk -F / '{print $1}' | sed -e "s/:refs//")"
+            export REPO="$(echo "${{ github.repository }}" | awk -F / '{print $2}' | sed -e "s/:refs//")"
+            echo "::set-env name=REPOSITORY_OWNER::$OWNER"
+            echo "::set-env name=REPOSITORY_NAME::$REPO"        
       - name: Robot Framework
         uses: joonvena/robotframework-docker-action@v0.1
         env:
