@@ -1,8 +1,11 @@
+
+name: 'Heroku-deploy'
 on: 
-    push:
-      branches:
-        - master
-robot_test:
+  push:
+    branches:
+      - master
+jobs:
+  build:
     runs-on: ubuntu-latest
     name: Run Robot Framework Tests
     steps:
@@ -13,4 +16,4 @@ robot_test:
         env:
           BROWSER: chrome
           ROBOT_TESTS_DIR: ${{ github.workspace }}/
-          ROBOT_REPORTS_DIR: ${{ github.workspace }}/reports
+          ROBOT_REPORTS_DIR: ${{ github.workspace }}/
