@@ -1,4 +1,8 @@
-  robot_test:
+on: 
+    push:
+      branches:
+        - master
+robot_test:
     runs-on: ubuntu-latest
     name: Run Robot Framework Tests
     steps:
